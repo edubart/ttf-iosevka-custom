@@ -1,7 +1,7 @@
 # Maintainer: Andy Kluger <AndyKluger@gmail.com>
 # Contributor: Markus Weimar <mail@markusweimar.de>
 pkgname=ttf-iosevka-custom-git
-pkgver=r1693.e5405f20
+pkgver=r1708.060a4f2a
 pkgrel=1
 pkgdesc='A slender monospace sans-serif and slab-serif typeface inspired by Pragmata Pro, M+ and PF DIN Mono.'
 arch=('any')
@@ -13,11 +13,11 @@ conflicts=('ttf-iosevka-custom')
 provides=('ttf-iosevka-custom')
 source=(
   'git+https://github.com/be5invis/Iosevka'
-  'private-build-plans.toml.example'
+  'private-build-plans.toml'
 )
 sha256sums=(
   'SKIP'
-  '7b043dbe521ec14c146e337404fdeec9a3470582153f744a9fcd61458d9ecb8a'
+  'SKIP'
 )
 
 pkgver() {
@@ -30,9 +30,15 @@ prepare() {
   if [[ -f "$buildplans" ]]; then
     cp "$buildplans" Iosevka/
   else
-    echo ">>> $buildplans not found, using private-build-plans.toml.example"
-    cp private-build-plans.toml.example Iosevka/private-build-plans.toml
+    echo ">>> $buildplans not found, using private-build-plans.toml"
+    cp private-build-plans.toml Iosevka/private-build-plans.toml
   fi
+
+  # fixes for leading-1000
+  sed -i 's/^cap = [0-9]*/cap = 700/' Iosevka/params/parameters.toml
+  sed -i 's/^xheight = [0-9]*/xheight = 510/' Iosevka/params/parameters.toml
+  sed -i 's/^symbolMid = [0-9]*/symbolMid = 300/' Iosevka/params/parameters.toml
+  sed -i 's/^parenSize = [0-9]*/parenSize = 950/' Iosevka/params/parameters.toml
 }
 
 build() {
@@ -40,6 +46,8 @@ build() {
   npm install
   npm update
   npm run build -- ttf::iosevka-custom
+  npm run build -- ttf::iosevka-fixed-custom
+  npm run build -- ttf::iosevka-term-custom
 }
 
 package() {

@@ -1,0 +1,97 @@
+# docs:
+# https://github.com/be5invis/Iosevka
+# https://github.com/be5invis/Iosevka/blob/master/private-build-plans.sample.toml
+# https://github.com/be5invis/Iosevka#build-your-own-style
+
+# ss## stylistic sets:
+# https://raw.githubusercontent.com/be5invis/Iosevka/master/images/stylesets.png
+
+# cv## character variants:
+# https://raw.githubusercontent.com/be5invis/Iosevka/master/images/charvars.png
+
+# ligset-* ligature sets:
+# https://raw.githubusercontent.com/be5invis/Iosevka/master/images/ligations.png
+
+# abcdefghijklmnopqrstuvxyz
+# ABCDEFGHIJKLMNOPQRSTUVXYZ
+# 0123456789
+# !@#$%^&*()_+{}:"<>?~`'[]-=,./
+
+[buildPlans.iosevka-custom]        # Plan name
+family = "Iosevka Custom"          # Font menu family name
+design = [                         # Common styles
+  "leading-1000",                  # line spacing
+
+  "ligset-clike",                  # C like ligation
+  "calt-tildeeq",                  # ~=
+
+  "cv02",                          # a
+  "cv05",                          # i
+  "cv09",                          # l
+  "cv92",                          # G
+  "cv43",                          # Q
+  "cv14",                          # 0
+  "cv61",                          # *
+  "cv30",                          # ^
+  "cv36",                          # {
+  "cv62",                          # %
+  "cv55",                          # $
+  "cv67",                          # <=
+]
+
+# upright = []                     # Upright-only styles
+# italic = []                      # Italic-only styles
+# oblique = []                     # Oblique-only styles
+
+[buildPlans.iosevka-fixed-custom]  # Plan name
+family = "Iosevka Fixed Custom"    # Font menu family name
+design = [                         # Common styles
+
+  "sp-fixed",                      # strict mono; no ligatures
+
+  "leading-1000",                  # line spacing
+
+  "cv02",                          # a
+  "cv05",                          # i
+  "cv09",                          # l
+  "cv92",                          # G
+  "cv43",                          # Q
+  "cv14",                          # 0
+  "cv61",                          # *
+  "cv30",                          # ^
+  "cv36",                          # {
+  "cv62",                          # %
+  "cv55",                          # $
+  "cv67",                          # <=
+]
+# upright = []                     # Upright-only styles
+# italic = []                      # Italic-only styles
+# oblique = []                     # Oblique-only styles
+
+[buildPlans.iosevka-term-custom]   # Plan name
+family = "Iosevka Term Custom"     # Font menu family name
+design = [                         # Common styles
+
+  "sp-term",                       # strict mono; with ligatures
+
+  "ligset-clike",                  # C like ligation
+  "calt-tildeeq",                  # ~=
+
+  "leading-1000",                  # line spacing
+
+  "cv02",                          # a
+  "cv05",                          # i
+  "cv09",                          # l
+  "cv92",                          # G
+  "cv43",                          # Q
+  "cv14",                          # 0
+  "cv61",                          # *
+  "cv30",                          # ^
+  "cv36",                          # {
+  "cv62",                          # %
+  "cv55",                          # $
+  "cv67",                          # <=
+]
+# upright = []                     # Upright-only styles
+# italic = []                      # Italic-only styles
+# oblique = []                     # Oblique-only styles
