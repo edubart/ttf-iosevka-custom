@@ -26,10 +26,14 @@ design = [                         # Common styles
   "calt-tildeeq",                  # ~=
 
   "cv02",                          # a
-  "cv05",                          # i
+  "cv52",                          # f
+  "cv56",                          # i
+  "cv98",                          # j
+  "cv68",                          # k
   "cv09",                          # l
+  "cv90",                          # u
+  "cv49",                          # y
   "cv92",                          # G
-  "cv43",                          # Q
   "cv14",                          # 0
   "cv61",                          # *
   "cv30",                          # ^
@@ -52,10 +56,14 @@ design = [                         # Common styles
   "leading-1000",                  # line spacing
 
   "cv02",                          # a
-  "cv05",                          # i
+  "cv52",                          # f
+  "cv56",                          # i
+  "cv98",                          # j
+  "cv68",                          # k
   "cv09",                          # l
+  "cv90",                          # u
+  "cv49",                          # y
   "cv92",                          # G
-  "cv43",                          # Q
   "cv14",                          # 0
   "cv61",                          # *
   "cv30",                          # ^
@@ -80,10 +88,14 @@ design = [                         # Common styles
   "leading-1000",                  # line spacing
 
   "cv02",                          # a
-  "cv05",                          # i
+  "cv52",                          # f
+  "cv56",                          # i
+  "cv98",                          # j
+  "cv68",                          # k
   "cv09",                          # l
+  "cv90",                          # u
+  "cv49",                          # y
   "cv92",                          # G
-  "cv43",                          # Q
   "cv14",                          # 0
   "cv61",                          # *
   "cv30",                          # ^
